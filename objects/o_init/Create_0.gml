@@ -26,8 +26,7 @@ var coords = grid_to_coord(_x, _y);
 echo("Coords", coords)
 
 var xy = coord_to_grid(coords);
-echo(xy);
 
-copy_sprite_origin(s_grass_tile, s_dirt);
+copy_sprite_origin(s_grass_tile, s_dirt, s_edge);
 
 room_goto(rm_mainmenu);

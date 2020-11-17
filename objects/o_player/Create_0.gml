@@ -12,6 +12,6 @@ keyboard_inputs[1] = ord("W");
 keyboard_inputs[2] = ord("A");
 keyboard_inputs[3] = ord("S");
 
-movespeed_base = 400;
+movespeed_base = 600;
 
 leg_position = 1;

@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Draw",
-    "path": "folders/Scripts/Framework/Draw.yy",
+    "name": "StageGeneration",
+    "path": "folders/Scripts/World/StageGeneration.yy",
   },
   "resourceVersion": "1.0",
-  "name": "draw_fullscreen_color",
+  "name": "generate_stage_bridge",
   "tags": [],
   "resourceType": "GMScript",
 }

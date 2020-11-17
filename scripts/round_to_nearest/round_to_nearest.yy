@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Draw",
-    "path": "folders/Scripts/Framework/Draw.yy",
+    "name": "Math",
+    "path": "folders/Scripts/Framework/Math.yy",
   },
   "resourceVersion": "1.0",
-  "name": "draw_fullscreen_color",
+  "name": "round_to_nearest",
   "tags": [],
   "resourceType": "GMScript",
 }

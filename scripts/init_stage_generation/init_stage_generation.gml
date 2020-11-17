@@ -11,7 +11,8 @@ function init_stage_generation() {
 
 	enum terrain_type {
 		interior,
-		edge
+		edge,
+		bridge
 	}
 
 
