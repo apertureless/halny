@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Camera",
-    "path": "folders/Scripts/Framework/Camera.yy",
+    "name": "Grid",
+    "path": "folders/Scripts/Gameplay/Grid.yy",
   },
   "resourceVersion": "1.0",
-  "name": "view_xview",
+  "name": "set_tile_z",
   "tags": [],
   "resourceType": "GMScript",
 }

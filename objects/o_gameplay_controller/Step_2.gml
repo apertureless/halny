@@ -8,7 +8,3 @@ if keyboard_check_pressed(vk_space) {
 	}
 	
 }
-
-if keyboard_check_pressed(ord("R")) {
-	room_restart();
-}

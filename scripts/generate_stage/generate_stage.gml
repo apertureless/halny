@@ -2,10 +2,6 @@ function generate_stage() {
 	clear_world_tiles();
 	WORLD_LAYER = layer_create(TERRAIN_DEPTH);
 	
-	ds_map_clear(TERRAIN_TYPES);
-	ds_list_clear(ROOM_CENTERS);
-	ds_list_clear(TERRAIN_LOCATIONS);
-
 	var number_rooms = irandom_range(5, 20);
 	var room_min_radius = 3;
 	var room_max_radius = 7;
@@ -111,6 +107,7 @@ function generate_stage() {
 		);
 	
 		layer_sprite_blend(sp, color_darken(c_white, random_range(.92, 1)));
+		ds_map_add(TILES_SPAWNED, this_coords, sp);
 		ds_list_add(TILES_LIST, sp);
 	}
 

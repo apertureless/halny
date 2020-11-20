@@ -18,8 +18,8 @@ function draw_fullscreen_color() {
 	draw_set_alpha(alpha);
 
 	draw_rectangle_color(
-		view_xview() - 5, 
-		view_yview() - 5,  
+		view_xview_c() - 5, 
+		view_yview_c() - 5,  
 		view_right() + 5,
 		view_bottom() + 5,
 		color,

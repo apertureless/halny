@@ -1,3 +1,3 @@
-function view_xview2() {
+function view_xview_c() {
 	return camera_get_view_x(view_camera[0]);
 }

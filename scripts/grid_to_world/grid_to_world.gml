@@ -23,9 +23,9 @@ function world_to_grid(xw, yw) {
 	var xy = 0;
 	
 	// Grid x position
-	xy[0] = round(0.5* (xw / (GRID_WIDTH * 0.5) + (yw / (GRID_HEIGHT * 0.5))));
+	xy[0] = round(0.5* (xw / (GRID_WIDTH * 0.5) - (yw / (GRID_HEIGHT * 0.5))));
 	// Grid y position
-	xy[1] = round(0.5* (xw / (GRID_WIDTH * 0.5) - (yw / (GRID_HEIGHT * 0.5))));
+	xy[1] = round(0.5* (xw / (GRID_WIDTH * 0.5) + (yw / (GRID_HEIGHT * 0.5))));
 	
 	return xy;
 }

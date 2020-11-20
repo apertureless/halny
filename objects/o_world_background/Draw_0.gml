@@ -1,5 +1,5 @@
 /// @description Insert description here
-//draw_fullscreen_color(rgb(0, 20, 50), 1, rgb(25, 140, 120));
+draw_fullscreen_color(rgb(0, 20, 50), 1, rgb(25, 140, 120));
 
 var aurora_camera_influence = [0.8, 0.3];
 var aurora_scales = [.4, 1];

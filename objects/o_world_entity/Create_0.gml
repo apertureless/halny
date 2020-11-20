@@ -3,6 +3,9 @@
 width = 30;
 height = 30;
 draw_entity_shadow = true;
+
+grid_pos = world_to_grid(x, y);
+
 z = 0;
 zspeed = 0;
 rotation = 0;

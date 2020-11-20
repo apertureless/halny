@@ -8,12 +8,15 @@ function init_stage_generation() {
 	globalvar TERRAIN_TYPES; TERRAIN_TYPES = ds_map_create();
 	
 	globalvar TILES_LIST; TILES_LIST = ds_list_create();
+	globalvar TILES_SPAWNED; TILES_SPAWNED = ds_map_create();
+	globalvar TILE_ZOFFSET; TILE_ZOFFSET = ds_map_create();
+	globalvar TILES_WITH_ZOFFSET; TILES_WITH_ZOFFSET = ds_list_create();
+	globalvar TILE_START_Y; TILE_START_Y = ds_map_create();
 
 	enum terrain_type {
 		interior,
 		edge,
 		bridge
 	}
-
 
 }

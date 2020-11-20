@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Camera",
-    "path": "folders/Scripts/Framework/Camera.yy",
+    "name": "Debug",
+    "path": "folders/Scripts/Framework/Debug.yy",
   },
   "resourceVersion": "1.0",
-  "name": "view_xview",
+  "name": "spawn_marker",
   "tags": [],
   "resourceType": "GMScript",
 }

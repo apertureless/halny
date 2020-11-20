@@ -22,6 +22,8 @@ if (abs(movement_input_x) != 0 || abs(movement_input_y) != 0) {
 	x += lengthdir_x(movement_per_frame, movement_direction);
 	y += lengthdir_y(movement_per_frame, movement_direction);
 	
+	grid_pos = world_to_grid(x, y);
+	
 	if z >= 0 {
 		leg_position *= -1;
 		zspeed = -500;
