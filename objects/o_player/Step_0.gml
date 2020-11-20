@@ -16,11 +16,10 @@ if movement_input_x != 0 {
 }
 
 if (abs(movement_input_x) != 0 || abs(movement_input_y) != 0) {
-	var movement_direction = point_direction(0, 0, movement_input_x, movement_input_y);
+	var movement_direction = point_direction(0, 0, movement_input_x, movement_input_y * GRID_RATIO);
 	var movement_per_frame = movespeed_base * SLOMO_SECONDS;
 	
-	x += lengthdir_x(movement_per_frame, movement_direction);
-	y += lengthdir_y(movement_per_frame, movement_direction);
+	world_move(movement_per_frame, movement_direction);
 	
 	grid_pos = world_to_grid(x, y);
 	
