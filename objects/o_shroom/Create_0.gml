@@ -11,3 +11,4 @@ special = random(1) <= .1;
 image_index = special;
 
 anim_timer = random(10);
+set_mask(width);

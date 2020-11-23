@@ -4,8 +4,10 @@
 // Inherit the parent event
 event_inherited();
 
-width = 64;
+
 height = 64;
+
+set_mask(64);
 
 keyboard_inputs[0] = ord("D");
 keyboard_inputs[1] = ord("W");

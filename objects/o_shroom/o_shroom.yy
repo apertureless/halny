@@ -3,7 +3,7 @@
     "name": "s_shroom",
     "path": "sprites/s_shroom/s_shroom.yy",
   },
-  "solid": false,
+  "solid": true,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,

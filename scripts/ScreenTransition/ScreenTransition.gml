@@ -9,8 +9,8 @@ function transition_place_sequence(_type) {
 	var _layer = layer_create(-9999, "transition");
 	layer_sequence_create(
 		_layer, 
-		view_width() * 0.5,
-		view_height() * 0.5,
+		camera_get_view_x(view_camera[0]),
+		camera_get_view_y(view_camera[0]),
 		_type
 	);
 }
@@ -38,4 +38,8 @@ function transition_change_room() {
 function transition_finished() {
 	layer_sequence_destroy(self.elementID);
 	global.MID_TRANSITION = false;
+}
+
+function transition_destroy() {
+	layer_sequence_destroy(self.elementID);
 }
