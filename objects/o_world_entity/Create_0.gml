@@ -12,6 +12,8 @@ rotation = 0;
 xscale = 1;
 scalemod = 1;
 
+image_speed = 0;
+
 init_blinking();
 init_squish();
 update_world_depth();

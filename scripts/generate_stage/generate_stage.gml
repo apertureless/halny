@@ -114,5 +114,23 @@ function generate_stage() {
 	ds_priority_destroy(spawn_order);
 	#endregion
 
+	#region Spawn objects in the world
+	var spawn_chances = 0;
+	spawn_chances[terrain_type.interior] = .05;
+	spawn_chances[terrain_type.edge] = .3;
+	spawn_chances[terrain_type.bridge] = 0;
+	
+	for (var i = 0; i < ds_list_size(TERRAIN_LOCATIONS); i++) {
+		var this_terrain_coords = TERRAIN_LOCATIONS[|i];
+		var this_terrain_type = TERRAIN_TYPES[?this_terrain_coords];
+		var this_spawn_chance = spawn_chances[this_terrain_type];
+		
+		if (random(1) <= this_spawn_chance) {
+			var world_position = coord_to_world(this_terrain_coords)
+			instance_create(o_shroom, world_position[0], world_position[1])
+		}
+	}
+	
+ 	#endregion
 
 }

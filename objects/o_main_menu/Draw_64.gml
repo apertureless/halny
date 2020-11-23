@@ -25,8 +25,6 @@ text_draw_y = 200 + 10 * sin(4 * game_seconds);
 var text_rotation = 3 * sin(2 * game_seconds);
 
 
-
-
 draw_simple_text(text_draw_x, text_draw_y, game_title, 1, c_strongyellow, text_rotation);
 
 #endregion

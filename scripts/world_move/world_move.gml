@@ -13,6 +13,7 @@ function world_move(move_distance, move_direction){
 		return true;
 	} else {
 		// Angle Sweep for sliding
+		
 		for (var angle_sweep = 10; angle_sweep <= 90; angle_sweep += 10) {
 			for (var dir = -1; dir <= 1; dir += 2) {
 				var angle_check = move_direction + (dir * angle_sweep);

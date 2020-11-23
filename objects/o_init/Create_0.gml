@@ -18,15 +18,6 @@ globalvar BACKGROUND_DEPTH; BACKGROUND_DEPTH = 60000;
 globalvar TERRAIN_DEPTH; TERRAIN_DEPTH = 50000;
 globalvar SHADOW_DEPTH; SHADOW_DEPTH = 40000;
 
-var _x = 120;
-var _y = 333;
-
-echo(_x, ",", _y);
-var coords = grid_to_coord(_x, _y);
-echo("Coords", coords)
-
-var xy = coord_to_grid(coords);
-
 copy_sprite_origin(s_grass_tile, s_dirt, s_edge);
 
 room_goto(rm_mainmenu);

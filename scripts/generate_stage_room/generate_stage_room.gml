@@ -19,8 +19,8 @@ function generate_stage_room(argument0, argument1, argument2) {
 		}
 	}
 
-	var room_xy = grid_to_world(room_center_xg, room_center_yg);
-	instance_create(o_ball, room_xy[0], room_xy[1]);
+	//var room_xy = grid_to_world(room_center_xg, room_center_yg);
+	//instance_create(o_ball, room_xy[0], room_xy[1]);
 
 
 }
