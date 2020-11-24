@@ -26,7 +26,6 @@ if (abs(movement_input_x) != 0 || abs(movement_input_y) != 0) {
 	if z >= 0 {
 		leg_position *= -1;
 		zspeed = -500;
-		rotation = 15 * leg_position;
 		set_squish(.1);
 	}
 

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_player",
-    "path": "sprites/s_player/s_player.yy",
+    "name": "s_character_body",
+    "path": "sprites/s_character_body/s_character_body.yy",
   },
   "solid": false,
   "visible": true,
