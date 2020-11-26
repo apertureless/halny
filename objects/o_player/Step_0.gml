@@ -3,9 +3,38 @@ moving = false;
 
 #region Super duper charge
 if (mouse_check_button_pressed(mb_left)) {
-	charge_x_target = mouse_x;
-	charge_y_target = mouse_y;
-	charging = true;
+	
+	charge_x_check = mouse_x;
+	charge_y_check = mouse_y;
+	
+	var angle_check_start = point_direction(mouse_x, mouse_y, x, y);
+	
+	for (var circle_radius = 0; circle_radius <= 60; circle_radius += 15) {
+		var iterations = (circle_radius/5)+1
+		var angle_interval = 360 / iterations;
+		
+		for (var i = 0; i < iterations; i++) {
+			var angle_to_check = angle_check_start + i * angle_interval;
+			var xcheck = charge_x_check + lengthdir_x(circle_radius, angle_to_check);
+			var ycheck = charge_y_check + lengthdir_y(circle_radius, angle_to_check) * GRID_RATIO;
+			
+			if debug_mode {
+				if world_pos_open(xcheck, ycheck) {
+					spawn_marker(xcheck, ycheck, c_lime, 5, .5);
+				} else {
+					spawn_marker(xcheck, ycheck, c_red, 5, .5);
+				}
+			}
+		}
+	}
+	
+	/*
+	if world_pos_open(charge_x_check, charge_y_check, true) {
+		charge_x_target = charge_x_check;
+	    charge_y_target = charge_y_check;
+		charging = true;
+	}*/
+	
 }
 #endregion
 
