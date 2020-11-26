@@ -9,31 +9,30 @@ if (mouse_check_button_pressed(mb_left)) {
 	
 	var angle_check_start = point_direction(mouse_x, mouse_y, x, y);
 	
-	for (var circle_radius = 0; circle_radius <= 60; circle_radius += 15) {
+	for (var circle_radius = 0; circle_radius <= 60 && !charging; circle_radius += 15) {
 		var iterations = (circle_radius/5)+1
 		var angle_interval = 360 / iterations;
 		
-		for (var i = 0; i < iterations; i++) {
+		for (var i = 0; i < iterations && !charging; i++) {
 			var angle_to_check = angle_check_start + i * angle_interval;
 			var xcheck = charge_x_check + lengthdir_x(circle_radius, angle_to_check);
 			var ycheck = charge_y_check + lengthdir_y(circle_radius, angle_to_check) * GRID_RATIO;
 			
 			if debug_mode {
-				if world_pos_open(xcheck, ycheck) {
+				if world_pos_open(xcheck, ycheck, true) {
 					spawn_marker(xcheck, ycheck, c_lime, 5, .5);
 				} else {
 					spawn_marker(xcheck, ycheck, c_red, 5, .5);
 				}
 			}
+			
+			if (world_pos_open(xcheck, ycheck, true)) {
+				charge_x_target = xcheck;
+				charge_y_target = ycheck;
+				charging = true;
+			}
 		}
 	}
-	
-	/*
-	if world_pos_open(charge_x_check, charge_y_check, true) {
-		charge_x_target = charge_x_check;
-	    charge_y_target = charge_y_check;
-		charging = true;
-	}*/
 	
 }
 #endregion
@@ -52,6 +51,32 @@ if charging {
 	if point_distance(x, y, charge_x_target, charge_y_target) < 1 {
 		charging = false;
 	}
+	
+	// Check for shroom collisions
+	// @Todo Refactor later into a more beautiful piece of code.
+	var collided_shrooms = ds_list_create();
+	var ellipse_height_half = width * 0.5 * GRID_RATIO;
+	var ellipse_width_half = width * 0.5;
+	
+	collision_ellipse_list(
+		x - ellipse_width_half, 
+		y - ellipse_height_half,
+		x + ellipse_width_half,
+		y + ellipse_height_half,
+		o_shroom,
+		false,
+		true,
+		collided_shrooms,
+		false
+	);
+	
+	for (var i = 0; i < ds_list_size(collided_shrooms); i++) {
+		with collided_shrooms[|i] {
+			instance_destroy();
+		}
+	}
+	
+	ds_list_destroy(collided_shrooms)
 	
 } else {
 	
