@@ -31,6 +31,7 @@ if (mouse_check_button_pressed(mb_left)) {
 				charge_y_target = ycheck;
 				charge_direction = point_direction(x, y, charge_x_target, charge_y_target);
 				charging = true;
+				set_camera_shake(7);
 			}
 		}
 	}

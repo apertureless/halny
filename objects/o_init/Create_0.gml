@@ -20,4 +20,5 @@ globalvar SHADOW_DEPTH; SHADOW_DEPTH = 40000;
 
 copy_sprite_origin(s_grass_tile, s_dirt, s_edge);
 
+set_resolution();
 room_goto(rm_mainmenu);

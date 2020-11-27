@@ -28,3 +28,9 @@ if mouse_check_button(mb_left) {
 if keyboard_check_pressed(ord("R")) {
 	room_restart();
 }
+
+if (cinema_mode) {
+	transition_percent = min(1, transition_percent + 0.2)
+} else {
+	transition_percent = max(0, transition_percent - 0.2)
+}

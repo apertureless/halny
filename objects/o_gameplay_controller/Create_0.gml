@@ -11,3 +11,8 @@ generate_stage();
 if debug_mode {
 	instance_create(o_hitbox_draw);
 }
+
+transition_percent = 0;
+cinema_mode = false
+origin_camera_width = view_width();
+origin_camera_height = view_height();
