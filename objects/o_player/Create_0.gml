@@ -20,10 +20,11 @@ leg_position = 1;
 anim_timer = 0;
 moving = false;
 
-charge_speed = 4000;
+charge_speed = 2000;
 charge_x_target = x;
 charge_y_target = y;
 charging = false;
+charge_direction = 0;
 
 #region Animation
 

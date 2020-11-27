@@ -76,6 +76,7 @@
     {"id":{"name":"fnt_regular","path":"fonts/fnt_regular/fnt_regular.yy",},"order":1,},
     {"id":{"name":"o_init","path":"objects/o_init/o_init.yy",},"order":0,},
     {"id":{"name":"o_main_menu","path":"objects/o_main_menu/o_main_menu.yy",},"order":1,},
+    {"id":{"name":"s_character_dash","path":"sprites/s_character_dash/s_character_dash.yy",},"order":6,},
     {"id":{"name":"o_gameplay_controller","path":"objects/o_gameplay_controller/o_gameplay_controller.yy",},"order":0,},
     {"id":{"name":"o_world_background","path":"objects/o_world_background/o_world_background.yy",},"order":1,},
     {"id":{"name":"s_pixel","path":"sprites/s_pixel/s_pixel.yy",},"order":0,},
