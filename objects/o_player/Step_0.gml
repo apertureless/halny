@@ -1,43 +1,55 @@
 /// @description Movement
 moving = false;
 
+#region Decrease Cooldowns
+dash_attack_cooldown = max(dash_attack_cooldown - SLOMO_SECONDS, 0);
+echo(dash_attack_cooldown);
+
+
+#endregion
+
 #region Super duper charge
 if (mouse_check_button_pressed(mb_left)) {
+	if (dash_attack_cooldown <= 0) {
 	
-	charge_x_check = mouse_x;
-	charge_y_check = mouse_y;
+		charge_x_check = mouse_x;
+		charge_y_check = mouse_y;
 	
-	var angle_check_start = point_direction(mouse_x, mouse_y, x, y);
+		var angle_check_start = point_direction(mouse_x, mouse_y, x, y);
 	
-	for (var circle_radius = 0; circle_radius <= 60 && !charging; circle_radius += 15) {
-		var iterations = (circle_radius/5)+1
-		var angle_interval = 360 / iterations;
+		for (var circle_radius = 0; circle_radius <= 60 && !charging; circle_radius += 15) {
+			var iterations = (circle_radius/5)+1
+			var angle_interval = 360 / iterations;
 		
-		for (var i = 0; i < iterations && !charging; i++) {
-			var angle_to_check = angle_check_start + i * angle_interval;
-			var xcheck = charge_x_check + lengthdir_x(circle_radius, angle_to_check);
-			var ycheck = charge_y_check + lengthdir_y(circle_radius, angle_to_check) * GRID_RATIO;
+			for (var i = 0; i < iterations && !charging; i++) {
+				var angle_to_check = angle_check_start + i * angle_interval;
+				var xcheck = charge_x_check + lengthdir_x(circle_radius, angle_to_check);
+				var ycheck = charge_y_check + lengthdir_y(circle_radius, angle_to_check) * GRID_RATIO;
 			
-			if debug_mode {
-				if world_pos_open(xcheck, ycheck, true) {
-					spawn_marker(xcheck, ycheck, c_lime, 5, .5);
-				} else {
-					spawn_marker(xcheck, ycheck, c_red, 5, .5);
+				if debug_mode {
+					if world_pos_open(xcheck, ycheck, true) {
+						spawn_marker(xcheck, ycheck, c_lime, 5, .5);
+					} else {
+						spawn_marker(xcheck, ycheck, c_red, 5, .5);
+					}
+				}
+				
+				// Do the charge
+				if (world_pos_open(xcheck, ycheck, true)) {
+					charge_x_target = xcheck;
+					charge_y_target = ycheck;
+					charge_direction = point_direction(x, y, charge_x_target, charge_y_target);
+					charging = true;
+					dash_attack_cooldown = dash_attack_cooldown_max;
+					set_camera_shake(7);
 				}
 			}
-			
-			if (world_pos_open(xcheck, ycheck, true)) {
-				charge_x_target = xcheck;
-				charge_y_target = ycheck;
-				charge_direction = point_direction(x, y, charge_x_target, charge_y_target);
-				charging = true;
-				set_camera_shake(7);
-			}
 		}
-	}
 	
+	}
 }
 #endregion
+
 
 if charging {
 	// 1. Check distance from current position to target position

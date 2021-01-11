@@ -9,6 +9,11 @@ height = 56;
 
 set_mask(52);
 
+#region Abilities
+dash_attack_cooldown = 0;
+dash_attack_cooldown_max = 0.5;
+#endregion
+
 keyboard_inputs[0] = ord("D");
 keyboard_inputs[1] = ord("W");
 keyboard_inputs[2] = ord("A");
