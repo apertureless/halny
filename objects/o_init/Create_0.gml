@@ -6,7 +6,7 @@ randomize();
 #macro c_mutedpink make_color_rgb(87, 49, 61)
 #macro c_mutedblue make_color_rgb(105, 139, 194)
 #macro c_muteddarkred make_color_rgb(39, 6, 6)
-
+#macro c_toxix_green make_color_rgb(25, 140, 120);
 
 init_time();
 init_grid();
