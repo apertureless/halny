@@ -1,0 +1,1 @@
+draw_sprite_ext(s_curser, 0, CURSOR_XGUI, CURSOR_YGUI, 1, 1, 0, c_white, 1);

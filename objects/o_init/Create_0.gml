@@ -18,7 +18,14 @@ globalvar BACKGROUND_DEPTH; BACKGROUND_DEPTH = 60000;
 globalvar TERRAIN_DEPTH; TERRAIN_DEPTH = 50000;
 globalvar SHADOW_DEPTH; SHADOW_DEPTH = 40000;
 
+globalvar CURSOR_XGUI; CURSOR_XGUI = 0;
+globalvar CURSOR_YGUI; CURSOR_YGUI = 0;
+
+globalvar CURSOR_XWORLD; CURSOR_XWORLD = 0;
+globalvar CURSOR_YWORLD; CURSOR_YWORLD = 0;
+
 copy_sprite_origin(s_grass_tile, s_dirt, s_edge);
 
 set_resolution();
+instance_create(o_cursor);
 room_goto(rm_mainmenu);
