@@ -9,7 +9,7 @@ echo(dash_attack_cooldown);
 #endregion
 
 #region Super duper charge
-if (mouse_check_button_pressed(mb_left)) {
+if (keyboard_check_pressed(ord("Q"))) {
 	if (dash_attack_cooldown <= 0) {
 	
 		charge_x_check = mouse_x;

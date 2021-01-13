@@ -41,6 +41,7 @@
     {"id":{"name":"view_bottom","path":"scripts/view_bottom/view_bottom.yy",},"order":5,},
     {"id":{"name":"sq_slide_in_horizontal","path":"sequences/sq_slide_in_horizontal/sq_slide_in_horizontal.yy",},"order":2,},
     {"id":{"name":"view_width","path":"scripts/view_width/view_width.yy",},"order":6,},
+    {"id":{"name":"draw_shadow_text","path":"scripts/draw_shadow_text/draw_shadow_text.yy",},"order":2,},
     {"id":{"name":"view_height","path":"scripts/view_height/view_height.yy",},"order":7,},
     {"id":{"name":"gui_center_x","path":"scripts/gui_center_x/gui_center_x.yy",},"order":0,},
     {"id":{"name":"o_ability_icon","path":"objects/o_ability_icon/o_ability_icon.yy",},"order":0,},
