@@ -11,7 +11,7 @@ set_mask(52);
 
 #region Abilities
 dash_attack_cooldown = 0;
-dash_attack_cooldown_max = 1.5;
+dash_attack_cooldown_max = 1;
 #endregion
 
 walk_inputs[0] = input_action.walk_right;

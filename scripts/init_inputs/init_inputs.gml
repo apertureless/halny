@@ -24,8 +24,11 @@ function init_inputs(){
 		released
 	}
 	
+	globalvar CURRENT_GAMEPAD;
 	globalvar INPUT_INFO;
 	globalvar INPUT_STATES;
+	
+	CURRENT_GAMEPAD = -1;
 	
 	setup_input(input_action.walk_right, "Walk right", ord("D"), gp_padr);
 	setup_input(input_action.walk_up, "Walk up", ord("W"), gp_padu);
