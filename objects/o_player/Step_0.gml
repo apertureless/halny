@@ -3,8 +3,6 @@ moving = false;
 
 #region Decrease Cooldowns
 dash_attack_cooldown = max(dash_attack_cooldown - SLOMO_SECONDS, 0);
-echo(dash_attack_cooldown);
-
 
 #endregion
 
