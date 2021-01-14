@@ -7,7 +7,7 @@ dash_attack_cooldown = max(dash_attack_cooldown - SLOMO_SECONDS, 0);
 #endregion
 
 #region Super duper charge
-if (keyboard_check_pressed(ord("Q"))) {
+if (input_pressed(input_action.dash)) {
 	if (dash_attack_cooldown <= 0) {
 	
 		charge_x_check = mouse_x;
@@ -94,8 +94,8 @@ if charging {
 	var movement_input_x = 0;
 	var movement_input_y = 0;
 
-	for (var i = 0; i < array_length_1d(keyboard_inputs); i++) {
-		if keyboard_check(keyboard_inputs[i]) {
+	for (var i = 0; i < array_length_1d(walk_inputs); i++) {
+		if input_held(walk_inputs[i]) {
 			var _movement_direction = 90 * i;
 			movement_input_x += lengthdir_x(1, _movement_direction)
 			movement_input_y += lengthdir_y(1, _movement_direction)

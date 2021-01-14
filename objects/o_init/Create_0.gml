@@ -11,6 +11,7 @@ randomize();
 init_time();
 init_grid();
 init_stage_generation();
+init_inputs();
 
 globalvar GRAVITY; GRAVITY = 4000;
 
